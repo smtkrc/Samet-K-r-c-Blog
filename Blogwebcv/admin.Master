@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.Master.cs" Inherits="Blogwebcv.Site1" %>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Web blog Samet Kürücü</title>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="admindosyalar/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Our Custom CSS -->
+    <link href="admindosyalar/sidebar/bootstrap-3/style4.css" rel="stylesheet" />
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body style="background-color: #666666">
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" style="background-color: #666666">
+            <div class="sidebar-header" style="background-color: #666666">
+                <h3 style="background-color: #666666">Samet Kürücü</h3>
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components" style="background-color: #666666">
+                <li class="active">
+                    <a href="Hakkımda.aspx" class="dropdown-toggle" style="background-color: #666666">
+                        <i class="fas fa-home" style="background-color: #666666"></i>
+                        hakkımda
+                    </a>
+
+                </li>
+                <li>
+                    <a href="AdminDeneyimler.aspx" style="background-color: #666666">
+                        <i class="fas fa-briefcase" style="background-color: #666666"></i>
+                        Deneyimlerim
+                    </a>
+                    <a href="adminegitimler.aspx" class="dropdown-toggle" style="background-color: #666666">
+                        <i class="glyphicon glyphicon-education"></i>
+                        Eğitim Hayatım
+                    </a>
+
+                </li>
+                <li>
+                    <a href="adminyetenekler.aspx" style="background-color: #666666">
+                        <i class="glyphicon glyphicon-book"></i>
+                        Yeteneklerim
+                    </a>
+                </li>
+                <li>
+                    <a href="adminhobiler.aspx" style="background-color: #666666">
+                        <i class="glyphicon glyphicon-music"></i>
+                        Hobilerim
+                    </a>
+                </li>
+                <li>
+                    <a href="adminsertifikalar.aspx" style="background-color: #666666">
+                        <i class="glyphicon glyphicon-certificate"></i>
+                        Eğitiim ve Sertifikalarım
+                    </a>
+                </li>
+         
+             <li>
+                    <a href="adminsertifikalar.aspx" style="background-color: #666666">
+                        <i></i>
+                        <asp:HyperLink NavigateUrl="~/default.aspx" ID="HyperLink1" runat="server" CssClass="glyphicon glyphicon-log-out">Anasayfaya Dön</asp:HyperLink>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="admindosyalar/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap JS -->
+
+    <link href="test2.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
